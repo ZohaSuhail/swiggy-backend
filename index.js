@@ -37,7 +37,9 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/restaurants/:resId', async (req, res) => {
+
   const resId=req.params.resId;
+  console.log(resId);
   try {
     // Fetch data from Swiggy API
     const response = await fetch( `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.3330529&lng=83.0069298&restaurantId=${resId}`,{
