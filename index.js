@@ -42,10 +42,11 @@ app.get('/restaurants/:resId', async (req, res) => {
   console.log(resId);
   try {
     // Fetch data from Swiggy API
-    const response = await fetch( `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.3330529&lng=83.0069298&restaurantId=${resId}`,{
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36', // Header to mimic browser request
-      },
+    const response = await fetch( `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.3330529&lng=83.0069298&restaurantId=${resId}`
+     // ,{
+     //  headers: {
+     //    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36', // Header to mimic browser request
+     //  },
   });
 
     // Check if the request was successful
