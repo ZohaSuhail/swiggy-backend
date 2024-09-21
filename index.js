@@ -7,7 +7,7 @@ const app = express();
 const SWIGGY_API_URL = 'https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.3330529&lng=83.0069298&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
 
 // Set up a simple GET route
-app.get('/api/restaurants', async (req, res) => {
+app.get('/', async (req, res) => {
   try {
     // Fetch data from Swiggy API
     const response = await fetch(SWIGGY_API_URL,{
