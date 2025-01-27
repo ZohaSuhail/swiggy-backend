@@ -7,7 +7,7 @@ const app = express();
 
 // Define the Swiggy API URL
 app.use(cors());
-const SWIGGY_API_URL = 'https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.3330529&lng=83.0069298&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
+const SWIGGY_API_URL = 'https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.99740&lng=79.00110&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
 const MENU_URL= "";
 // Set up a simple GET route
 app.get('/', async (req, res) => {
